@@ -1,3 +1,259 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.create_profile_Page {
+  .form_area {
+    box-shadow: 0px 2px 4px 0px #e6e0dd4d;
+    background-color: #f3f3f7;
+    border: 1px solid #bcc7d6;
+    border-radius: 10px;
+    padding: 10px;
+
+    .ant-form-item-label {
+      padding: 0 0 2px;
+    }
+    .ant-upload-list {
+      width: 100%;
+      display: flex !important;
+      justify-content: center;
+    }
+    .ant-upload {
+      width: 100% !important;
+    }
+    .ant-input {
+      background-color: #fff !important;
+      border: 0px solid #ff000000 !important;
+      border-radius: 7px;
+      outline: none;
+      &:focus {
+        box-shadow: 0 0 0 2px #ff7c4446;
+      }
+    }
+    .custom_field_area {
+      border-bottom: 1px solid #ff7d44;
+      margin-bottom: 15px;
+      .area_title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29.05px;
+        color: #102034;
+        margin-bottom: 10px;
+      }
+    }
+
+    .basic_area {
+    }
+    .save_btn {
+      background-color: #ff8141;
+      width: 100%;
+      height: 44px;
+      border-radius: 50px;
+      color: #fff;
+      &:hover {
+        background-color: #ff8041e3;
+        color: #fff;
+        border-color: unset;
+      }
+    }
+    .more_btn {
+      background-color: #ff8141;
+      width: fit-content;
+      height: 34px;
+      font-size: 16px;
+      border-radius: 50px;
+      color: #fff;
+      margin-bottom: 10px;
+      &:hover {
+        background-color: #ff8041e3;
+        color: #fff;
+        border-color: unset;
+      }
+    }
+  }
+  .preview_area {
+    .profile {
+      padding: 20px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #024351 0%, #00323b 100%);
+
+      .video_thumb_area {
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+          .play_icon {
+            transform: scale(1.2);
+          }
+        }
+        .play_icon {
+          position: absolute;
+          bottom: 40px;
+          left: calc(50% - 60px);
+          width: 120px;
+          height: 120px;
+          object-fit: contain;
+          transition: 0.2s;
+        }
+        .thumb {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+      }
+
+      .details_area {
+        .header {
+          color: #fff;
+          h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 54px;
+            margin-bottom: 5px;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+          }
+        }
+
+        .details {
+          margin-top: 20px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+          .item {
+            border-bottom: 1px solid #bcc7d69d;
+            padding-bottom: 2px;
+            .title {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 26px;
+              color: #ff7d44;
+            }
+            .value {
+              font-size: 22px;
+              font-weight: 500;
+              line-height: 26.63px;
+              color: #fcfcfd;
+            }
+          }
+        }
+      }
+    }
+    .work_experience {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 20px;
+      background: #fff1eb;
+
+      .section_title {
+        position: relative;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        color: #1c3f39;
+        padding-bottom: 5px;
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: #ff7d44;
+          width: 30px;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      .experience_item {
+        margin-top: 20px;
+        border: 1px solid #bcc7d6;
+        background-color: #fff7f3;
+        border-radius: 20px;
+        padding: 20px;
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          border-bottom: 1px solid #bcc7d6;
+          margin-bottom: 15px;
+          padding-bottom: 5px;
+          h3 {
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 30.26px;
+            color: #104b59;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.36px;
+            color: #0f0f24;
+          }
+        }
+
+        .content {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          .item {
+            flex-basis: 25%;
+            h3 {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 16.94px;
+              color: #666885;
+              margin-bottom: 5px;
+            }
+            p {
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 19.36px;
+              color: #0f0f24;
+            }
+          }
+        }
+      }
+    }
+    .professional_skill {
+      background-color: #f6f5e6;
+      margin-bottom: 20px;
+      .experience_item {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .item {
+        border-bottom: 1px solid #bcc7d6;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        height: 100%;
+      }
+      .header {
+        border-bottom: 0px solid #d6bcc000 !important ;
+        margin-bottom: 0 !important;
+        padding-bottom: 0px !important;
+        h3 {
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 30.26px;
+          color: #104b59;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.36px;
+          color: #0f0f24;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 13.5px;
+          color: #111e21;
+        }
+      }
+    }
+  }
+}
